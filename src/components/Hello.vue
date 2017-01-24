@@ -26,6 +26,7 @@
         a(href="https://github.com/vuejs/awesome-vue" target="_blank") awesome-vue
 </template>
 
+
 <script>
 export default {
   name: 'hello',
@@ -36,6 +37,7 @@ export default {
   }
 }
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
@@ -52,5 +54,4 @@ li
 
 a
   color #42b983
-
 </style>

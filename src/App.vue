@@ -4,8 +4,13 @@
     hello
 </template>
 
+
 <script>
 import Hello from './components/Hello'
+// require THREE from 'three'
+var THREE = require('three')
+
+console.log(THREE)
 
 export default {
   name: 'app',
@@ -15,13 +20,15 @@ export default {
 }
 </script>
 
-<style lang="stylus">
 
+<style lang="stylus">
 #app
   font-family 'Avenir', Helvetica, Arial, sans-serif
   font-smoothing antialiased
-  text-align center
-  color #2c3e50
-  margin-top 60px
   
+  text-align center
+  
+  color #2c3e50
+  
+  margin-top 60px
 </style>
