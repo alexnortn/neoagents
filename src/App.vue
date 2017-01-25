@@ -1,16 +1,18 @@
 <template lang="pug">
   #app
-    test(msg="How does it feel?")
+    users
 </template>
 
 
 <script>
 // import Hello from './components/Hello'
+import Users from './components/Users'
 import Test from './components/Test'
 
 export default {
   name: 'app',
   components: {
+    Users,
     Test
   }
 }
