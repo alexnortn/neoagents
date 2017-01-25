@@ -1,8 +1,13 @@
 <template lang="pug">
   .users
     h1 Users    
+    
     ul
-      li(v-for="user in users")=`{{user.name + ":" + user.email}}`
+      li(v-for="user in users")
+        input(type="checkbox" class="toggle" v-model="user.contacted")
+        span(:class="{contacted: user.contacted}")=`{{user.name + ":" + user.email}}`
+          button(v-on:click="deleteUser(user)") x
+    
     form(v-on:submit="addUser")
       input(type="text" v-model="newUser.name" placeholder="Enter Name ")
       br
@@ -47,6 +52,10 @@ export default {
       })
       console.log('Add User:' + this.newUser.name)
       evt.preventDefault()
+    },
+    deleteUser: function (user) {
+      this.users.splice(this.users.indexOf(user), 1)
+      console.log('Deleted User:' + user.name)
     }
   }
 }
@@ -57,6 +66,10 @@ export default {
 .users
   padding-left 50px
   text-align left
+
 ul
   list-style none
+  
+.contacted
+  text-decoration line-through
 </style>
