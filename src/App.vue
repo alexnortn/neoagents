@@ -1,21 +1,17 @@
 <template lang="pug">
   #app
-    img(src="./assets/logo.png")
-    hello
+    test
 </template>
 
 
 <script>
-import Hello from './components/Hello'
-// require THREE from 'three'
-var THREE = require('three')
-
-console.log(THREE)
+// import Hello from './components/Hello'
+import Test from './components/Test'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Test
   }
 }
 </script>
