@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    test
+    test(msg="How does it feel?")
 </template>
 
 

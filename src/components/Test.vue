@@ -15,6 +15,16 @@
     button(v-on:click="greet('Vietnam')") Good Morning
     
     input(type="text" v-on:keyup="pressKey" v-on:keyup.enter="enterHit")
+    hr
+    
+    label First Name
+    input(type="text" v-model="user.firstName")
+    br
+    label Last Name
+    input(type="text" v-model="user.lastName")
+
+    h3(v-text="fullName")
+    h2(v-text="msg")
 
 </template>
 
@@ -22,6 +32,12 @@
 <script>
 export default {
   name: 'test',
+  props: {
+    msg: {
+      type: String,
+      default: 'FooBar'
+    }
+  },
   data () {
     return {
       title: 'Hello from the Other Side',
@@ -48,6 +64,11 @@ export default {
     },
     enterHit: function () {
       console.log('You hit enter!')
+    }
+  },
+  computed: {
+    fullName: function () {
+      return this.user.firstName + ' ' + this.user.lastName
     }
   }
 }
